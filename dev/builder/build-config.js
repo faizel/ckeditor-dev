@@ -4,7 +4,7 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'moono',
+	skin: 'jqueryui',
 	ignore: [
 		'dev',
 		'README.md',
