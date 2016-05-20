@@ -1,6 +1,6 @@
 ﻿/**
- * @license Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.html or http://ckeditor.com/license
+ * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
 /**
@@ -14,7 +14,7 @@
  * @class
  * @singleton
  */
-CKEDITOR.scriptLoader = (function() {
+CKEDITOR.scriptLoader = ( function() {
 	var uniqueScripts = {},
 		waitingList = {};
 
@@ -113,13 +113,16 @@ CKEDITOR.scriptLoader = (function() {
 
 					// Create the <script> element.
 					var script = new CKEDITOR.dom.element( 'script' );
-					script.setAttributes({
+					script.setAttributes( {
 						type: 'text/javascript',
-						src: url } );
+						src: url
+					} );
 
 					if ( callback ) {
-						if ( CKEDITOR.env.ie ) {
-							// FIXME: For IE, we are not able to return false on error (like 404).
+
+						// The onload or onerror event does not fire in IE8.
+						if ( CKEDITOR.env.ie && CKEDITOR.env.version == 8 ) {
+
 							script.$.onreadystatechange = function() {
 								if ( script.$.readyState == 'loaded' || script.$.readyState == 'complete' ) {
 									script.$.onreadystatechange = null;
@@ -135,7 +138,6 @@ CKEDITOR.scriptLoader = (function() {
 								}, 0 );
 							};
 
-							// FIXME: Opera and Safari will not fire onerror.
 							script.$.onerror = function() {
 								onLoad( url, false );
 							};
@@ -165,7 +167,7 @@ CKEDITOR.scriptLoader = (function() {
 		 *
 		 * @see CKEDITOR.scriptLoader#load
 		 */
-		queue: (function() {
+		queue: ( function() {
 			var pending = [];
 
 			// Loads the very first script from queue and removes it.
@@ -197,6 +199,6 @@ CKEDITOR.scriptLoader = (function() {
 				if ( pending.length == 1 )
 					loadNext.call( this );
 			};
-		})()
+		} )()
 	};
-})();
+} )();

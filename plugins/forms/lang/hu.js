@@ -1,6 +1,6 @@
-﻿/*
-Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.html or http://ckeditor.com/license
+/*
+Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 CKEDITOR.plugins.setLang( 'forms', 'hu', {
 	button: {
@@ -15,7 +15,8 @@ CKEDITOR.plugins.setLang( 'forms', 'hu', {
 		checkboxTitle: 'Jelölőnégyzet tulajdonságai',
 		radioTitle: 'Választógomb tulajdonságai',
 		value: 'Érték',
-		selected: 'Kiválasztott'
+		selected: 'Kiválasztott',
+		required: 'Required' // MISSING
 	},
 	form: {
 		title: 'Űrlap tulajdonságai',
@@ -37,6 +38,7 @@ CKEDITOR.plugins.setLang( 'forms', 'hu', {
 		size: 'Méret',
 		lines: 'sor',
 		chkMulti: 'több sor is kiválasztható',
+		required: 'Required', // MISSING
 		opText: 'Szöveg',
 		opValue: 'Érték',
 		btnAdd: 'Hozzáad',
@@ -57,6 +59,7 @@ CKEDITOR.plugins.setLang( 'forms', 'hu', {
 		value: 'Érték',
 		charWidth: 'Megjelenített karakterek száma',
 		maxChars: 'Maximális karakterszám',
+		required: 'Required', // MISSING
 		type: 'Típus',
 		typeText: 'Szöveg',
 		typePass: 'Jelszó',
@@ -65,4 +68,4 @@ CKEDITOR.plugins.setLang( 'forms', 'hu', {
 		typeTel: 'Telefonszám',
 		typeUrl: 'URL'
 	}
-});
+} );

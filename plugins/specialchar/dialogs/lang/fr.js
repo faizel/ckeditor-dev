@@ -1,6 +1,6 @@
-﻿/**
- * @license Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.html or http://ckeditor.com/license
+/**
+ * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
 CKEDITOR.plugins.setLang( 'specialchar', 'fr', {
@@ -27,13 +27,13 @@ CKEDITOR.plugins.setLang( 'specialchar', 'fr', {
 	macr: 'Macron',
 	deg: 'Degré',
 	sup2: 'Exposant 2',
-	sup3: '\\tExposant 3',
+	sup3: 'Exposant 3',
 	acute: 'Accent aigu',
 	micro: 'Omicron',
 	para: 'Paragraphe',
 	middot: 'Point médian',
 	cedil: 'Cédille',
-	sup1: '\\tExposant 1',
+	sup1: 'Exposant 1',
 	ordm: 'Indicateur ordinal masculin',
 	raquo: 'Guillemet français fermant',
 	frac14: 'Un quart',
@@ -122,4 +122,4 @@ CKEDITOR.plugins.setLang( 'specialchar', 'fr', {
 	hArr: 'Double flèche vers la gauche',
 	diams: 'Carreau noir',
 	asymp: 'Presque égal'
-});
+} );
